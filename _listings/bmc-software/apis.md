@@ -25,7 +25,7 @@ apis:
   tags: Plugins
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/plugins/master/_listings/bmc-software/v1-plugins-private-plugin-org-repo-put.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/plugins/master/_listings/bmc-software/v1-plugins-private-plugin-delete.md
 x-common:
 - type: x-blog
   url: http://www.bmc.com/blogs
