@@ -1,8 +1,14 @@
 ---
 swagger: "2.0"
 info:
-  title: BMC Software Merged API
+  title: BMC Software API Add private plugin
   version: 1.0.0
+  description: |-
+    Adds or updates a private plugin.
+    A plugin exists as a repository in Github.
+    By adding a private plugin the plugin will appear on your settings -&gt; plugins tab just like any other plugin which
+    can then be installed and/or added to a relay.
+    If a private plugin has the same name as an existing plugin it will override the existing plugin within your account.
 schemes:
 - http
 produces:
