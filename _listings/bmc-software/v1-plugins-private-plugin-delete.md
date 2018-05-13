@@ -1,8 +1,11 @@
 ---
 swagger: "2.0"
 info:
-  title: BMC Software Merged API
+  title: BMC Software API Remove private plugin
   version: 1.0.0
+  description: |-
+    Removes a private plugin from your account. Use this function after adding a private plugin to make your private
+    plugin disappear from available plugins in your settings.
 schemes:
 - http
 produces:
