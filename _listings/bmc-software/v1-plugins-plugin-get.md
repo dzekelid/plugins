@@ -1,8 +1,9 @@
 ---
 swagger: "2.0"
 info:
-  title: BMC Software Merged API
+  title: BMC Software API Get plugin
   version: 1.0.0
+  description: Gets a single plugin definition
 schemes:
 - http
 produces:
