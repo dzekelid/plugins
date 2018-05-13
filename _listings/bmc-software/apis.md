@@ -26,6 +26,15 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/plugins/master/_listings/bmc-software/v1-plugins-plugin-get.md
+- name: BMC Software API Get plugin
+  description: Gets a single plugin definition
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/bmc-truesight.png
+  humanURL: http://www.bmc.com
+  baseURL: https://{host}//
+  tags: Plugins
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/plugins/master/_listings/bmc-software/v1-plugins-plugin-get.md
 x-common:
 - type: x-blog
   url: http://www.bmc.com/blogs
