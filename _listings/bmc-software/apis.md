@@ -26,20 +26,17 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/plugins/master/_listings/bmc-software/v1-plugins-plugin-get.md
-- name: BMC Software API Add private plugin
+- name: BMC Software API Remove private plugin
   description: |-
-    Adds or updates a private plugin.
-    A plugin exists as a repository in Github.
-    By adding a private plugin the plugin will appear on your settings -&gt; plugins tab just like any other plugin which
-    can then be installed and/or added to a relay.
-    If a private plugin has the same name as an existing plugin it will override the existing plugin within your account.
+    Removes a private plugin from your account. Use this function after adding a private plugin to make your private
+    plugin disappear from available plugins in your settings.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/bmc-truesight.png
   humanURL: http://www.bmc.com
   baseURL: https://{host}//
   tags: Plugins
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/plugins/master/_listings/bmc-software/v1-plugins-private-plugin-org-repo-put.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/plugins/master/_listings/bmc-software/v1-plugins-private-plugin-delete.md
 x-common:
 - type: x-blog
   url: http://www.bmc.com/blogs
