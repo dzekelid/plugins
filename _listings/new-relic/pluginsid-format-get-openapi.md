@@ -1,10 +1,11 @@
 ---
 swagger: "2.0"
 x-collection-name: New Relic
-x-complete: 1
+x-complete: 0
 info:
-  title: New Relic
+  title: New Relic Get Plugins  . Format
   version: 1.0.0
+  description: This API endpoint returns a single plugin, identified by its ID.
 basePath: v2/
 schemes:
 - http
@@ -185,4 +186,17 @@ paths:
       - ""
       - .
       - Format
+x-streamrank:
+  polling_total_time_average: 0
+  polling_size_download_average: 0
+  streaming_total_time_average: 0
+  streaming_size_download_average: 0
+  change_yes: 0
+  change_no: 0
+  time_percentage: 0
+  size_percentage: 0
+  change_percentage: 0
+  last_run: ""
+  days_run: 0
+  minute_run: 0
 ---

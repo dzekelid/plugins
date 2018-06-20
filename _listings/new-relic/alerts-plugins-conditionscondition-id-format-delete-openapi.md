@@ -1,10 +1,13 @@
 ---
 swagger: "2.0"
 x-collection-name: New Relic
-x-complete: 1
+x-complete: 0
 info:
-  title: New Relic
+  title: New Relic Delete Alerts Plugins Conditions Condition  . Format
   version: 1.0.0
+  description: "This API endpoint allows you to delete Plugins conditions associated
+    with your alert policy.\n\nNote: Admin User\u2019s API Key is required.\n\nSee
+    our documentation for a discussion on deleting Plugins conditions."
 basePath: v2/
 schemes:
 - http
@@ -107,82 +110,17 @@ paths:
       - ""
       - .
       - Format
-  /alerts_plugins_conditions.{format}:
-    get:
-      summary: Get Alerts Plugins Conditions. Format
-      description: "This API endpoint allows you to list the Plugins conditions for
-        your alert policy.\n\nSee our documentation for a discussion on \noutput pagination."
-      operationId: getAlertsPluginsConditions.Format
-      x-api-path-slug: alerts-plugins-conditions-format-get
-      parameters:
-      - in: query
-        name: page
-        description: Pagination index
-        type: integer
-      - in: query
-        name: policy_id
-        description: Alerts policy ID
-        type: integer
-      responses:
-        200:
-          description: OK
-      tags:
-      - Alerts
-      - Plugins
-      - Conditions.
-      - Format
-  /plugins.{format}:
-    get:
-      summary: Get Plugins. Format
-      description: "This API endpoint returns a list of the Plugins associated with
-        your New Relic account.\n\nPlugins can be filtered by their guid or the list
-        of plugin IDs.\n\nSee our documentation for a discussion on \noutput pagination."
-      operationId: getPlugins.Format
-      x-api-path-slug: plugins-format-get
-      parameters:
-      - in: query
-        name: detailed
-        description: Include all data about a plugin
-        type: boolean
-      - in: query
-        name: filter[guid]
-        description: Filter plugin by guid
-        type: string
-      - in: query
-        name: filter[ids]
-        description: Filter plugin by ids
-        type: list
-      - in: query
-        name: page
-        description: Pagination index
-        type: integer
-      responses:
-        200:
-          description: OK
-      tags:
-      - Plugins.
-      - Format
-  /plugins/{id}.{format}:
-    get:
-      summary: Get Plugins  . Format
-      description: This API endpoint returns a single plugin, identified by its ID.
-      operationId: getPlugins.Format
-      x-api-path-slug: pluginsid-format-get
-      parameters:
-      - in: query
-        name: detailed
-        description: Include all data about a plugin
-        type: boolean
-      - in: path
-        name: id
-        description: Plugin ID
-        type: integer
-      responses:
-        200:
-          description: OK
-      tags:
-      - Plugins
-      - ""
-      - .
-      - Format
+x-streamrank:
+  polling_total_time_average: 0
+  polling_size_download_average: 0
+  streaming_total_time_average: 0
+  streaming_size_download_average: 0
+  change_yes: 0
+  change_no: 0
+  time_percentage: 0
+  size_percentage: 0
+  change_percentage: 0
+  last_run: ""
+  days_run: 0
+  minute_run: 0
 ---
