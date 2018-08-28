@@ -1,12 +1,9 @@
----
 swagger: "2.0"
 x-collection-name: Mattermost
 x-complete: 1
 info:
-  title: Mattermost API Reference
-  description: -api-v4-is-stable-with-the-mattermost-server-4-0-release--api-v3-was-deprecated-on-january-16th-2018-and-scheduled-for-removal-in-mattermost-v5-0--details-heretagapiv3deprecation--looking-for-the-api-v3-reference-it-has-moved-herehttpsapi-mattermost-comv3-
-  termsOfService: https://about.mattermost.com/default-terms/
-  version: 4.0.0
+  title: Mattermost
+  version: 1.0.0
 host: your-mattermost-url.com
 basePath: /api/v4
 schemes:
@@ -33,6 +30,27 @@ paths:
           description: OK
       tags:
       - Plugins
+    post:
+      summary: Upload plugin
+      description: |-
+        Upload a plugin compressed in a .tar.gz file. Plugins and plugin uploads must be enabled in the server's config settings.
+
+        ##### Permissions
+        Must have `manage_system` permission.
+
+        __Minimum server version__: 4.4
+      operationId: upload-a-plugin-compressed-in-a-targz-file-plugins-and-plugin-uploads-must-be-enabled-in-the-servers
+      x-api-path-slug: plugins-post
+      parameters:
+      - in: formData
+        name: plugin
+        description: The plugin image to be uploaded
+      responses:
+        200:
+          description: OK
+      tags:
+      - Upload
+      - Plugin
   /plugins/webapp:
     get:
       summary: Get webapp plugins
@@ -51,4 +69,66 @@ paths:
       tags:
       - Webapp
       - Plugins
----
+  /plugins/{plugin_id}:
+    delete:
+      summary: Remove plugin
+      description: |-
+        Remove the plugin with the provided ID from the server. All plugin files are deleted. Plugins must be enabled in the server's config settings.
+
+        ##### Permissions
+        Must have `manage_system` permission.
+
+        __Minimum server version__: 4.4
+      operationId: remove-the-plugin-with-the-provided-id-from-the-server-all-plugin-files-are-deleted-plugins-must-be-
+      x-api-path-slug: pluginsplugin-id-delete
+      parameters:
+      - in: path
+        name: plugin_id
+      responses:
+        200:
+          description: OK
+      tags:
+      - Remove
+      - Plugin
+  /plugins/{plugin_id}/activate:
+    post:
+      summary: Activate plugin
+      description: |-
+        Activate a previously uploaded plugin. Plugins must be enabled in the server's config settings.
+
+        ##### Permissions
+        Must have `manage_system` permission.
+
+        __Minimum server version__: 4.4
+      operationId: activate-a-previously-uploaded-plugin-plugins-must-be-enabled-in-the-servers-config-settings-permiss
+      x-api-path-slug: pluginsplugin-idactivate-post
+      parameters:
+      - in: path
+        name: plugin_id
+      responses:
+        200:
+          description: OK
+      tags:
+      - Activate
+      - Plugin
+  /plugins/{plugin_id}/deactivate:
+    post:
+      summary: Deactivate plugin
+      description: |-
+        Deactivate a previously activated plugin. Plugins must be enabled in the server's config settings.
+
+        ##### Permissions
+        Must have `manage_system` permission.
+
+        __Minimum server version__: 4.4
+      operationId: deactivate-a-previously-activated-plugin-plugins-must-be-enabled-in-the-servers-config-settings-perm
+      x-api-path-slug: pluginsplugin-iddeactivate-post
+      parameters:
+      - in: path
+        name: plugin_id
+      responses:
+        200:
+          description: OK
+      tags:
+      - Deactivate
+      - Plugin

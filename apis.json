@@ -1,0 +1,185 @@
+{
+	"name": "Streadata.io API Gallery - Plugins",
+	"description": "This is a repository of plugins APIs, self-contained as a Github repository, with HTML and YAML representations of the APIs and their surrounding operations.",
+	"image": "http://template.streamdata.gallery/assets/plugins.png",
+	"created": "2018-02-24",
+	"modified": "2018-08-28",
+	"url": "http://plugins.streamdata.gallery/apis.json",
+	"specificationVersion": "0.14",
+	"apis": [
+		{
+			"name": "Best Buy",
+			"x-api-slug": "best-buy",
+			"description": "Best Buy Company Profile  With operations in the United States,  Canada and Mexico, Best Buy is a North  American retailer of technology and  entertainment products and services with  a commitment to growth and innovation.  The Best Buy family of brand...",
+			"image": "http://kinlane-productions.s3.amazonaws.com/screen-capture-api/158-best-buy-apis.jpg",
+			"humanURL": "http://www.bestbuy.com/",
+			"baseURL": "https:///",
+			"tags": "Plugins",
+			"properties": [
+				{
+					"type": "x-openapi-spec",
+					"url": "https://raw.githubusercontent.com/streamdata-gallery-topics/plugins/master/_listings/best-buy/openapi.md"
+				}
+			]
+		},
+		{
+			"name": "Stack Exchange",
+			"x-api-slug": "stack-exchange",
+			"description": "After someone asks a question, members of the community propose answers. Others vote on those answers. Very quickly, the answers with the most votes rise to the top. You dont have to read through a lot of discussion to find the best answer.    Like to...",
+			"image": "http://kinlane-productions.s3.amazonaws.com/screen-capture-api/253-stack-exchange.jpg",
+			"humanURL": "http://stackexchange.com",
+			"baseURL": "https://api.stackexchange.com//2.2",
+			"tags": "Plugins",
+			"properties": [
+				{
+					"type": "x-openapi-spec",
+					"url": "https://raw.githubusercontent.com/streamdata-gallery-topics/plugins/master/_listings/stack-exchange/openapi.md"
+				}
+			]
+		},
+		{
+			"name": "BMC Software",
+			"x-api-slug": "bmc-software",
+			"description": "Transform your digital enterprise with BMC IT solutions. From mainframe to cloud to mobile, we???ll help you drive innovation and industrial efficiency.",
+			"image": "http://kinlane-productions.s3.amazonaws.com/screen-capture-api/713-bmc-software.jpg",
+			"humanURL": "http://www.bmc.com",
+			"baseURL": "https:///",
+			"tags": "Plugins",
+			"properties": [
+				{
+					"type": "x-openapi-spec",
+					"url": "https://raw.githubusercontent.com/streamdata-gallery-topics/plugins/master/_listings/bmc-software/openapi.md"
+				}
+			]
+		},
+		{
+			"name": "FixYa",
+			"x-api-slug": "fixya",
+			"description": "Product troubleshooting support, DIY advice, and help from experts & local pros. Ask questions and get answers to fix, repair, and service any product.",
+			"image": "http://kinlane-productions.s3.amazonaws.com/screen-capture-api/1059-fixya.jpg",
+			"humanURL": "http://www.fixya.com/",
+			"baseURL": "https:///",
+			"tags": "Plugins",
+			"properties": [
+				{
+					"type": "x-openapi-spec",
+					"url": "https://raw.githubusercontent.com/streamdata-gallery-topics/plugins/master/_listings/fixya/openapi.md"
+				}
+			]
+		},
+		{
+			"name": "New Relic",
+			"x-api-slug": "new-relic",
+			"description": "New Relic???s digital intelligence platform lets developers, ops, and tech teams measure and monitor the performance of their applications and infrastructure.",
+			"image": "http://kinlane-productions.s3.amazonaws.com/screen-capture-api/22963-new-relic.jpg",
+			"humanURL": "https://newrelic.com/",
+			"baseURL": "https:///v2/",
+			"tags": "Plugins",
+			"properties": [
+				{
+					"type": "x-openapi-spec",
+					"url": "https://raw.githubusercontent.com/streamdata-gallery-topics/plugins/master/_listings/new-relic/openapi.md"
+				}
+			]
+		},
+		{
+			"name": "Mattermost",
+			"x-api-slug": "mattermost",
+			"description": "Open source, private cloud Slack-alternative, Workplace messaging for web, PCs and phones. MIT-licensed. Hundreds of contributors. 14 languages. Secure, configurable, and scalable from teams to the enterprise.",
+			"image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/mattermost-logo.png",
+			"humanURL": "https://mattermost.com",
+			"baseURL": "https:///",
+			"tags": "Plugins",
+			"properties": [
+				{
+					"type": "x-openapi-spec",
+					"url": "https://raw.githubusercontent.com/streamdata-gallery-topics/plugins/master/_listings/mattermost/openapi.md"
+				}
+			]
+		},
+		{
+			"name": "Predix",
+			"x-api-slug": "predix",
+			"description": "Predix (IoT PaaS) helps you develop apps that connect people with industrial machines through analytics and data for better business outcomes.",
+			"image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/predix-vector-logo.png",
+			"humanURL": "https://www.predix.io",
+			"baseURL": "https:////v1",
+			"tags": "Plugins",
+			"properties": [
+				{
+					"type": "x-openapi-spec",
+					"url": "https://raw.githubusercontent.com/streamdata-gallery-topics/plugins/master/_listings/predix/openapi.md"
+				}
+			]
+		},
+		{
+			"name": "Plentymarkets",
+			"x-api-slug": "plentymarkets",
+			"description": "plentymarkets is an all-in-one e-commerce ERP solution, which combines a comprehensive stock management system with a versatile shop system and effortless multichannel sales. Thanks to comprehensive functions and interfaces that include all steps of the e-commerce value chain, you can use the cloud based software to completely automate all of your e-business processes as well as your companys own individual processes.",
+			"image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/plentymarkets.png",
+			"humanURL": "http://www.plentymarkets.co.uk",
+			"baseURL": "https://example.com//",
+			"tags": "Plugins",
+			"properties": [
+				{
+					"type": "x-openapi-spec",
+					"url": "https://raw.githubusercontent.com/streamdata-gallery-topics/plugins/master/_listings/plentymarkets/openapi.md"
+				}
+			]
+		},
+		{
+			"name": "Dezrez",
+			"x-api-slug": "dezrez",
+			"description": "Cloud based estate agent software , sales & letting agent software, estate agent website design and property management software - Dezrez  Services",
+			"image": "http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28888-www-dezrez-com.jpg",
+			"humanURL": "https://www.dezrez.com",
+			"baseURL": "https://api.dezrez.com//",
+			"tags": "Plugins",
+			"properties": [
+				{
+					"type": "x-openapi-spec",
+					"url": "https://raw.githubusercontent.com/streamdata-gallery-topics/plugins/master/_listings/dezrez/openapi.md"
+				}
+			]
+		}
+	],
+	"tags": "Plugins",
+	"include": [
+		{
+			"name": "Best Buy",
+			"url": "https://raw.githubusercontent.com/streamdata-gallery-topics/plugins/master/_listings/best-buy/apis.yaml"
+		},
+		{
+			"name": "Stack Exchange",
+			"url": "https://raw.githubusercontent.com/streamdata-gallery-topics/plugins/master/_listings/stack-exchange/apis.yaml"
+		},
+		{
+			"name": "BMC Software",
+			"url": "https://raw.githubusercontent.com/streamdata-gallery-topics/plugins/master/_listings/bmc-software/apis.yaml"
+		},
+		{
+			"name": "FixYa",
+			"url": "https://raw.githubusercontent.com/streamdata-gallery-topics/plugins/master/_listings/fixya/apis.yaml"
+		},
+		{
+			"name": "New Relic",
+			"url": "https://raw.githubusercontent.com/streamdata-gallery-topics/plugins/master/_listings/new-relic/apis.yaml"
+		},
+		{
+			"name": "Mattermost",
+			"url": "https://raw.githubusercontent.com/streamdata-gallery-topics/plugins/master/_listings/mattermost/apis.yaml"
+		},
+		{
+			"name": "Predix",
+			"url": "https://raw.githubusercontent.com/streamdata-gallery-topics/plugins/master/_listings/predix/apis.yaml"
+		},
+		{
+			"name": "Plentymarkets",
+			"url": "https://raw.githubusercontent.com/streamdata-gallery-topics/plugins/master/_listings/plentymarkets/apis.yaml"
+		},
+		{
+			"name": "Dezrez",
+			"url": "https://raw.githubusercontent.com/streamdata-gallery-topics/plugins/master/_listings/dezrez/apis.yaml"
+		}
+	]
+}

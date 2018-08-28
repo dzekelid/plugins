@@ -18,20 +18,42 @@ paths:
   /alerts_plugins_conditions/policies/{policy_id}.{format}:
     post:
       summary: Add Alerts Plugins Conditions Policies Policy  . Format
-      description: "This API endpoint allows you to create Plugins conditions for
-        your alert policies.\n\nNote: Admin User\u2019s API Key is required.\n\nSee
-        our documentation for a discussion on creating conditions for plugins.\n\nAll
-        fields are required except for \u201Crunbook_url\u201D, \u201Cenabled\u201D
-        (defaults to false).\n\nname: A title for your condition.\n\nenabled: The
-        status of your condition (optional).\n\nentities: An array of instance IDs
-        associated with your condition.\n\nmetric_description: A title for the metric
-        to display in notifications.\n\nmetric: The metric to evaluate on.\n\nvalue_function:
-        min, max, average, sample_size, total, percent\n\nrunbook_url: Runbook URL
-        to display in notifications (optional).\n\nterms[duration] (in minutes): 5,
-        10, 15, 30, 60, 120.\n\nterms[operator]: above, below, equal.\n\nterms[priority]:
-        critical, warning.\n\nterms[threshold]: Must be 0 or greater.\n\nterms[time_function]:
-        all, any.\n\nplugin[id]: The ID of the plugin.\n\nplugin[guid]: The GUID of
-        the plugin."
+      description: |-
+        This API endpoint allows you to create Plugins conditions for your alert policies.
+
+        Note: Admin User???s API Key is required.
+
+        See our documentation for a discussion on creating conditions for plugins.
+
+        All fields are required except for ???runbook_url???, ???enabled??? (defaults to false).
+
+        name: A title for your condition.
+
+        enabled: The status of your condition (optional).
+
+        entities: An array of instance IDs associated with your condition.
+
+        metric_description: A title for the metric to display in notifications.
+
+        metric: The metric to evaluate on.
+
+        value_function: min, max, average, sample_size, total, percent
+
+        runbook_url: Runbook URL to display in notifications (optional).
+
+        terms[duration] (in minutes): 5, 10, 15, 30, 60, 120.
+
+        terms[operator]: above, below, equal.
+
+        terms[priority]: critical, warning.
+
+        terms[threshold]: Must be 0 or greater.
+
+        terms[time_function]: all, any.
+
+        plugin[id]: The ID of the plugin.
+
+        plugin[guid]: The GUID of the plugin.
       operationId: postAlertsPluginsConditionsPoliciesPolicy.Format
       x-api-path-slug: alerts-plugins-conditionspoliciespolicy-id-format-post
       parameters:
@@ -59,10 +81,13 @@ paths:
   /alerts_plugins_conditions/{id}.{format}:
     put:
       summary: Put Alerts Plugins Conditions  . Format
-      description: "This API endpoint allows you to update Plugins conditions for
-        your alert policies.\n\nNote: Admin User\u2019s API Key is required.\n\nSee
-        Alerts Plugins Conditions &gt; Create for an explanation of the field values
-        ued in this command or the online document on\nupdating conditions for plugins."
+      description: |-
+        This API endpoint allows you to update Plugins conditions for your alert policies.
+
+        Note: Admin User???s API Key is required.
+
+        See Alerts Plugins Conditions &gt; Create for an explanation of the field values ued in this command or the online document on
+        updating conditions for plugins.
       operationId: putAlertsPluginsConditions.Format
       x-api-path-slug: alerts-plugins-conditionsid-format-put
       parameters:
@@ -88,9 +113,12 @@ paths:
   /alerts_plugins_conditions/{condition_id}.{format}:
     delete:
       summary: Delete Alerts Plugins Conditions Condition  . Format
-      description: "This API endpoint allows you to delete Plugins conditions associated
-        with your alert policy.\n\nNote: Admin User\u2019s API Key is required.\n\nSee
-        our documentation for a discussion on deleting Plugins conditions."
+      description: |-
+        This API endpoint allows you to delete Plugins conditions associated with your alert policy.
+
+        Note: Admin User???s API Key is required.
+
+        See our documentation for a discussion on deleting Plugins conditions.
       operationId: deleteAlertsPluginsConditionsCondition.Format
       x-api-path-slug: alerts-plugins-conditionscondition-id-format-delete
       parameters:
@@ -132,6 +160,226 @@ paths:
       - Alerts
       - Plugins
       - Conditions.
+      - Format
+  /plugins/{id}.{format}:
+    get:
+      summary: Get Plugins  . Format
+      description: This API endpoint returns a single plugin, identified by its ID.
+      operationId: getPlugins.Format
+      x-api-path-slug: pluginsid-format-get
+      parameters:
+      - in: query
+        name: detailed
+        description: Include all data about a plugin
+        type: boolean
+      - in: path
+        name: id
+        description: Plugin ID
+        type: integer
+      responses:
+        200:
+          description: OK
+      tags:
+      - Plugins
+      - ""
+      - .
+      - Format
+  /plugins.{format}:
+    get:
+      summary: Get Plugins. Format
+      description: "This API endpoint returns a list of the Plugins associated with
+        your New Relic account.\n\nPlugins can be filtered by their guid or the list
+        of plugin IDs.\n\nSee our documentation for a discussion on \noutput pagination."
+      operationId: getPlugins.Format
+      x-api-path-slug: plugins-format-get
+      parameters:
+      - in: query
+        name: detailed
+        description: Include all data about a plugin
+        type: boolean
+      - in: query
+        name: filter[guid]
+        description: Filter plugin by guid
+        type: string
+      - in: query
+        name: filter[ids]
+        description: Filter plugin by ids
+        type: list
+      - in: query
+        name: page
+        description: Pagination index
+        type: integer
+      responses:
+        200:
+          description: OK
+      tags:
+      - Plugins.
+      - Format
+  /alerts_entity_conditions/{entity_id}.{format}:
+    get:
+      summary: Get Alerts Entity Conditions Entity  . Format
+      description: |-
+        This API endpoint allows you to list the Alerts conditions an entity is part of.
+
+        Entity type options (Synthetics is not yet supported):
+
+        BrowserApplication
+
+        Application
+
+        MobileApplication
+
+        Server
+
+        KeyTransaction
+
+        Plugin
+      operationId: getAlertsEntityConditionsEntity.Format
+      x-api-path-slug: alerts-entity-conditionsentity-id-format-get
+      parameters:
+      - in: path
+        name: entity_id
+        description: Entity ID
+        type: integer
+      - in: query
+        name: entity_type
+        description: Entity Type
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Alerts
+      - Entity
+      - Conditions
+      - Entity
+      - ""
+      - .
+      - Format
+    put:
+      summary: Put Alerts Entity Conditions Entity  . Format
+      description: "This API endpoint allows you to add an entity to a specified Alerts
+        condition.\n\nNote: Admin User???s API Key is required.\n \n  Entity type
+        options (Synthetics is not yet supported):\n\nBrowserApplication\n\nApplication\n\nMobileApplication\n\nServer\n\nKeyTransaction\n\nPlugin"
+      operationId: putAlertsEntityConditionsEntity.Format
+      x-api-path-slug: alerts-entity-conditionsentity-id-format-put
+      parameters:
+      - in: query
+        name: condition_id
+        description: Alerts condition ID
+        type: integer
+      - in: path
+        name: entity_id
+        description: Entity id to add
+        type: integer
+      - in: query
+        name: entity_type
+        description: Entity Type
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Alerts
+      - Entity
+      - Conditions
+      - Entity
+      - ""
+      - .
+      - Format
+    delete:
+      summary: Delete Alerts Entity Conditions Entity  . Format
+      description: |-
+        This API endpoint allows you to disassociate an entity with a specified Alerts condition.
+
+        Note: Admin User???s API Key is required.
+
+        Entity type options (Synthetics is not yet supported):
+
+        BrowserApplication
+
+        Application
+
+        MobileApplication
+
+        Server
+
+        KeyTransaction
+
+        Plugin
+      operationId: deleteAlertsEntityConditionsEntity.Format
+      x-api-path-slug: alerts-entity-conditionsentity-id-format-delete
+      parameters:
+      - in: query
+        name: condition_id
+        description: Alerts condition ID
+        type: integer
+      - in: path
+        name: entity_id
+        description: Entity id to remove
+        type: integer
+      - in: query
+        name: entity_type
+        description: Entity Type
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Alerts
+      - Entity
+      - Conditions
+      - Entity
+      - ""
+      - .
+      - Format
+  /alerts_events.{format}:
+    get:
+      summary: Get Alerts Events. Format
+      description: "This API endpoint allows you to list the alert events for your
+        account.\n\nAlerts events can be filter by product, target type, group ID,
+        instance ID, and event type.\n\nThe options for products are: APM, BROWSER,
+        MOBILE, SERVERS, PLUGINS, SYNTHETICS, and ALERTS.\n\nThe options for entity
+        type are: Application, Server, KeyTransaction, Plugin, MobileApplication,
+        BrowserApplication, and Monitor.\n\nThe options for event type are: NOTIFICATION,
+        DEPLOYMENT, VIOLATION_OPEN, VIOLATION_CLOSE, VIOLATION, and INSTRUMENTATION.\n\nThe
+        group ID option is normally the same as the entity ID (e.g. an Application
+        group ID and entity ID will be the same), however PLUGINS have a group ID
+        representing the PLUGIN itself, and entity IDs for all instances of that PLUGIN
+        type.\n\nSee our documentation for a discussion on \noutput pagination."
+      operationId: getAlertsEvents.Format
+      x-api-path-slug: alerts-events-format-get
+      parameters:
+      - in: query
+        name: filter[entity_group_id]
+        description: Filter by entity group ID
+        type: integer
+      - in: query
+        name: filter[entity_id]
+        description: Filter by entity ID
+        type: integer
+      - in: query
+        name: filter[entity_type]
+        description: Filter by entity type
+        type: string
+      - in: query
+        name: filter[event_type]
+        description: Filter by event type
+        type: string
+      - in: query
+        name: filter[product]
+        description: Filter by New Relic product
+        type: string
+      - in: query
+        name: page
+        description: Pagination index
+        type: integer
+      responses:
+        200:
+          description: OK
+      tags:
+      - Alerts
+      - Events.
       - Format
 x-streamrank:
   polling_total_time_average: 0
